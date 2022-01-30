@@ -33,6 +33,9 @@ local options = {
   termguicolors = true,
 }
 
+vim.g.netrw_browse_split = 4
+vim.g.netrw_liststyle = 3
+
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do

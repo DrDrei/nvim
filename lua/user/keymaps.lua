@@ -17,5 +17,10 @@ keymap('n', '<leader>q',  ':bd<cr>', term_opts)
 keymap('n', '<C-u>', '<C-u>zz', term_opts)
 keymap('n', '<C-d>', '<C-d>zz', term_opts)
 
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+
 keymap('n', '<leader>e', ':26Vex<cr>', term_opts)
 
