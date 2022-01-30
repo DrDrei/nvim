@@ -73,9 +73,11 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Favorites
   use 'windwp/nvim-autopairs'
+  use 'numToStr/Comment.nvim'
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
