@@ -34,5 +34,16 @@ keymap('n', '<leader>fq', "<cmd>lua require('telescope.builtin').quickfix()<cr>"
 keymap('n', '<leader>e', "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<cr>", opts)
+keymap("n", "<S-h>", ":bprevious<cr>", opts)
+
+-- Git stuff
+keymap("n", "<leader>gs", ":Git<CR>", opts)
+keymap("n", "<leader>gw", ":Gwrite<CR>", opts)
+keymap("n", "<leader>gc", ":Git commit --no-verify<cr>", opts)
+keymap("n", "<leader>gR", ":Git rebase -i<cr>", opts)
+keymap("n", "<leader>gp", ":Git pull<cr>", opts)
+keymap("n", "<leader>gP", ":Git push --no-verify<cr>", opts)
+keymap("n", "<leader>gb", ":Git blame<cr>", opts)
+keymap("n", "<leader>gd", ":Git difftool<cr>", opts)
+

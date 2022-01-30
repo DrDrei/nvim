@@ -82,6 +82,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
   use 'akinsho/bufferline.nvim'
+  use 'tpope/vim-fugitive'
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
