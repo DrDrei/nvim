@@ -1,5 +1,3 @@
-# Options
-
 local options = {
   backup = false,				                    -- no backupfile
   clipboard = "unnamedplus",		            -- access system clipboard
@@ -32,6 +30,7 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",                -- the font used in graphical neovim applications
   ignorecase = true,
+  termguicolors = true,
 }
 
 vim.opt.shortmess:append "c"
