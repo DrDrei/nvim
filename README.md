@@ -1,5 +1,5 @@
-# nvim
+# NVIM configs for DrDrei
 
-personal nvim configs
+Personal nvim configs
 
-credit to Chris@Machine: https://github.com/LunarVim/Neovim-from-scratch
+credit to Chris@Machine, most of the configs are from him: https://github.com/LunarVim/Neovim-from-scratch
