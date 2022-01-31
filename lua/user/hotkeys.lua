@@ -40,10 +40,10 @@ keymap("n", "<S-h>", ":bprevious<cr>", opts)
 -- Git stuff
 keymap("n", "<leader>gs", ":Git<CR>", opts)
 keymap("n", "<leader>gw", ":Gwrite<CR>", opts)
-keymap("n", "<leader>gc", ":Git commit --no-verify<cr>", opts)
+keymap("n", "<leader>go", ":Git commit --no-verify<cr>", opts)
 keymap("n", "<leader>gR", ":Git rebase -i<cr>", opts)
-keymap("n", "<leader>gp", ":Git pull<cr>", opts)
-keymap("n", "<leader>gP", ":Git push --no-verify<cr>", opts)
+keymap("n", "<leader>gl", ":Git pull<cr>", opts)
+keymap("n", "<leader>gp", ":Git push --no-verify<cr>", opts)
 keymap("n", "<leader>gb", ":Git blame<cr>", opts)
 keymap("n", "<leader>gd", ":Git difftool<cr>", opts)
 
