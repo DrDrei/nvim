@@ -12,4 +12,5 @@ require('user.gitsigns')
 require('user.nvim-tree')
 require('user.bufferline')
 require('user.fugitive')
+require('user.hop')
 

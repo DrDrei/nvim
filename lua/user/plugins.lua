@@ -45,6 +45,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use 'folke/tokyonight.nvim'
+  use 'morhetz/gruvbox'
 
   -- Completion
   use 'hrsh7th/nvim-cmp'
@@ -72,7 +73,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Favorites
@@ -83,6 +83,17 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
   use 'akinsho/bufferline.nvim'
   use 'tpope/vim-fugitive'
+  use 'phaazon/hop.nvim'
+  use {
+    'AckslD/nvim-neoclip.lua',
+    requires = {
+      {'tami5/sqlite.lua', module = 'sqlite'},
+      {'nvim-telescope/telescope.nvim'},
+    },
+    config = function()
+      require('neoclip').setup()
+    end,
+  }
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()

@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 telescope.load_extension('media_files')
+telescope.load_extension('neoclip')
 
 local actions = require "telescope.actions"
 
@@ -14,7 +15,11 @@ telescope.setup {
     path_display = { "smart" },
     layout_strategy = 'vertical',
 
-    file_ignore_patterns = {"node_modules", "__mocks__", "backup/"},
+    file_ignore_patterns = {
+      "node_modules",
+      "__mocks__",
+      "backup/",
+    },
 
     mappings = {
       i = {
@@ -82,6 +87,6 @@ telescope.setup {
     media_files = {
       filetypes = {"png", "webp", "jpg", "jpeg"},
       find_cmd = "rg"
-    }
+    },
   },
 }

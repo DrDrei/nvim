@@ -13,10 +13,6 @@ configs.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml" } },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-  },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
