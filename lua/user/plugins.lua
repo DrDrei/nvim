@@ -46,6 +46,8 @@ return packer.startup(function(use)
   -- Colorschemes
   use 'folke/tokyonight.nvim'
   use 'morhetz/gruvbox'
+  use 'joshdick/onedark.vim'
+  use 'ChristianChiarulli/nvcode-color-schemes.vim'
 
   -- Completion
   use 'hrsh7th/nvim-cmp'
@@ -84,6 +86,9 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'tpope/vim-fugitive'
   use 'phaazon/hop.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'brooth/far.vim'
+
   use {
     'AckslD/nvim-neoclip.lua',
     requires = {

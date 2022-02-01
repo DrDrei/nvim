@@ -13,4 +13,5 @@ require('user.nvim-tree')
 require('user.bufferline')
 require('user.fugitive')
 require('user.hop')
+require('user.null-ls')
 
