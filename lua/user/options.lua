@@ -31,6 +31,8 @@ local options = {
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	ignorecase = true,
 	termguicolors = true,
+	foldmethod = "expr",
+	foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 vim.g.netrw_browse_split = 4

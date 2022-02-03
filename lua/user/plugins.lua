@@ -45,9 +45,8 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
+	use("EdenEast/nightfox.nvim")
 	use("morhetz/gruvbox")
-	use("joshdick/onedark.vim")
-	use("ChristianChiarulli/nvcode-color-schemes.vim")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
@@ -75,6 +74,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("nvim-treesitter/playground")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Favorites
@@ -118,6 +118,10 @@ return packer.startup(function(use)
 		config = function()
 			require("lualine").setup()
 		end,
+	})
+	use({
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
 	})
 
 	if PACKER_BOOTSTRAP then
