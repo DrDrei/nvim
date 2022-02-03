@@ -12,10 +12,15 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>sf", ":w<cr>", term_opts)
 keymap("n", "<leader>so", ":so %<cr>", term_opts)
 keymap("n", "<C-c>", ":bd<cr>", term_opts)
+keymap("n", "<leader>q", ":bd<cr>", term_opts)
 
 -- Recenter when scrolling
 keymap("n", "<C-u>", "<C-u>zz", term_opts)
 keymap("n", "<C-d>", "<C-d>zz", term_opts)
+keymap("n", "Y", "y$", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "J", "mzJ`z", opts)
 
 -- Window Navigation
 keymap("n", "<leader>wh", "<C-w>h", opts)
