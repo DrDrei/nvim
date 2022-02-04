@@ -45,8 +45,6 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
-	use("EdenEast/nightfox.nvim")
-	use("morhetz/gruvbox")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
@@ -88,6 +86,7 @@ return packer.startup(function(use)
 	use("phaazon/hop.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("brooth/far.vim")
+	use("ThePrimeagen/git-worktree.nvim")
 
 	use({
 		"AckslD/nvim-neoclip.lua",
@@ -99,14 +98,12 @@ return packer.startup(function(use)
 			require("neoclip").setup()
 		end,
 	})
-
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
 			require("indent_blankline").setup()
 		end,
 	})
-
 	use({
 		"lewis6991/impatient.nvim",
 		config = function()

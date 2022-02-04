@@ -47,9 +47,13 @@ keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 -- Quickfix/Location Lists
-keymap("n", "<C-q>", ":copen<cr>", opts)
-keymap("n", "<C-p>", ":cp<cr>", opts)
-keymap("n", "<C-n>", ":cn<cr>", opts)
+keymap("n", "<C-q>", ":copen<cr>zz", opts)
+keymap("n", "<leader>co", ":copen<cr>zz", opts)
+keymap("n", "<C-p>", ":cp<cr>zz", opts)
+keymap("n", "<leader>ck", ":cp<cr>zz", opts)
+keymap("n", "<C-n>", ":cnext<cr>zz", opts)
+keymap("n", "<leader>cj", ":cnext<cr>zz", opts)
+keymap("n", "<leader>cc", ":cclose<cr>zz", opts)
 
 -- Git stuff
 keymap("n", "<leader>gs", ":Git<CR>", opts)
@@ -62,6 +66,7 @@ keymap("n", "<leader>gb", ":Git blame<cr>", opts)
 keymap("n", "<leader>gd", ":Git difftool<cr>", opts)
 keymap("n", "<leader>gj", ":diffget //2<cr>", opts) -- grab current changes
 keymap("n", "<leader>gk", ":diffget //3<cr>", opts) -- grab incoming changes
+keymap("n", "<leader>gw", ':lua require("telescope").extensions.git_worktree.git_worktrees()<cr><esc>', opts)
 
 -- Copy relative path
 keymap("n", "<leader>cp", ":let @+ = expand('%')<cr>", opts)

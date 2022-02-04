@@ -5,6 +5,7 @@ end
 
 telescope.load_extension("media_files")
 telescope.load_extension("neoclip")
+telescope.load_extension("git_worktree")
 
 local actions = require("telescope.actions")
 
