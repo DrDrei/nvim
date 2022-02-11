@@ -52,10 +52,7 @@ cmp.setup({
 	mapping = {
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-y>"] = cmp.config.disable,
-		["<C-e>"] = cmp.mapping({
-			i = cmp.mapping.abort(),
-			c = cmp.mapping.close(),
-		}),
+		["<C-e>"] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -69,10 +66,7 @@ cmp.setup({
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
+		end, { "i", "s" }),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_prev_item()
@@ -81,10 +75,7 @@ cmp.setup({
 			else
 				fallback()
 			end
-		end, {
-			"i",
-			"s",
-		}),
+		end, { "i", "s" }),
 	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },

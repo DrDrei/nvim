@@ -13,10 +13,13 @@ keymap("n", "<leader>sf", ":w<cr>", term_opts)
 keymap("n", "<leader>so", ":so %<cr>", term_opts)
 keymap("n", "<C-c>", ":bd<cr>", term_opts)
 keymap("n", "<leader>q", ":bd<cr>", term_opts)
+keymap("n", "<leader>;", "<C-w><C-w>", term_opts)
+keymap("n", "<leader>ss", "<cmd>source ~/.config/nvim/lua/user/snippets.lua<cr>", term_opts)
 
 -- Recenter when scrolling
 keymap("n", "<C-u>", "<C-u>zz", term_opts)
 keymap("n", "<C-d>", "<C-d>zz", term_opts)
+keymap("n", "<C-f>", "za", term_opts)
 keymap("n", "Y", "y$", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
@@ -56,13 +59,13 @@ keymap("n", "<leader>cj", ":cnext<cr>zz", opts)
 keymap("n", "<leader>cc", ":cclose<cr>zz", opts)
 
 -- Git stuff
-keymap("n", "<leader>gs", ":Git<CR>", opts)
+keymap("n", "<leader>gs", ":Git<CR>:resize 12<cr>", opts)
 keymap("n", "<leader>gw", ":Gwrite<CR>", opts)
 keymap("n", "<leader>go", ":Git commit --no-verify<cr>", opts)
-keymap("n", "<leader>gR", ":Git rebase -i<cr>", opts)
+keymap("n", "<leader>gR", ":Git rebase -i ", opts)
 keymap("n", "<leader>gl", ":Git pull<cr>", opts)
 keymap("n", "<leader>gp", ":Git push --no-verify<cr>", opts)
-keymap("n", "<leader>gb", ":Git blame<cr>", opts)
+keymap("n", "<leader>gb", ":Git blame<cr>A", opts)
 keymap("n", "<leader>gd", ":Git difftool<cr>", opts)
 keymap("n", "<leader>gj", ":diffget //2<cr>", opts) -- grab current changes
 keymap("n", "<leader>gk", ":diffget //3<cr>", opts) -- grab incoming changes

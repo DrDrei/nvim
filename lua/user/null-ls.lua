@@ -12,7 +12,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.prettier,
 		diagnostics.eslint,
-		null_ls.builtins.code_actions.gitsigns,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then

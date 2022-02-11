@@ -60,8 +60,10 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 
 	-- Snippets
-	use("L3MON4D3/LuaSnip")
-	use("rafamadriz/friendly-snippets")
+	use({
+		"L3MON4D3/LuaSnip",
+		"rafamadriz/friendly-snippets",
+	})
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
