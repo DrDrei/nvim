@@ -60,10 +60,10 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 
 	-- Snippets
-	use({
-		"L3MON4D3/LuaSnip",
-		"rafamadriz/friendly-snippets",
-	})
+	-- use({
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	"rafamadriz/friendly-snippets",
+	-- })
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -74,44 +74,23 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	use("nvim-treesitter/playground")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Favorites
-	use("windwp/nvim-autopairs")
-	use("numToStr/Comment.nvim")
-	use("lewis6991/gitsigns.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/bufferline.nvim")
-	use("tpope/vim-fugitive")
-	use("phaazon/hop.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("brooth/far.vim")
-	use("ThePrimeagen/git-worktree.nvim")
+	use({
+		"windwp/nvim-autopairs",
+		"akinsho/toggleterm.nvim",
+		"numToStr/Comment.nvim",
+		"lewis6991/gitsigns.nvim",
+		"kyazdani42/nvim-web-devicons",
+		"kyazdani42/nvim-tree.lua",
+		"akinsho/bufferline.nvim",
+		"tpope/vim-fugitive",
+		"phaazon/hop.nvim",
+		"jose-elias-alvarez/null-ls.nvim",
+		"ThePrimeagen/git-worktree.nvim",
+	})
 
-	use({
-		"AckslD/nvim-neoclip.lua",
-		requires = {
-			{ "tami5/sqlite.lua", module = "sqlite" },
-			{ "nvim-telescope/telescope.nvim" },
-		},
-		config = function()
-			require("neoclip").setup()
-		end,
-	})
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("indent_blankline").setup()
-		end,
-	})
-	use({
-		"lewis6991/impatient.nvim",
-		config = function()
-			require("impatient").enable_profile()
-		end,
-	})
 	use({
 		"nvim-lualine/lualine.nvim",
 		config = function()
@@ -124,14 +103,8 @@ return packer.startup(function(use)
 	})
 	use({
 		"ahmedkhalf/project.nvim",
-		config = function()
-			require("project_nvim").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
 	})
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

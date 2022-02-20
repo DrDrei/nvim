@@ -34,6 +34,7 @@ local options = {
 	foldmethod = "syntax",
 	foldlevel = 4,
 	foldenable = false,
+	hidden = true,
 }
 
 vim.g.netrw_browse_split = 4
