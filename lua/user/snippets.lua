@@ -7,17 +7,21 @@ local f = ls.function_node
 local c = ls.choice_node
 local d = ls.dynamic_node
 
-ls.snippets = {
-	all = {
-		s("tt", t("-- test")),
-	},
-	js = {
-		s("clg", t("// test")),
-	},
-	jsx = {
-		s("clg", t("// test")),
-	},
-	lua = {
-		ls.parser.parse_snippet("exp", "-- this is what was snipped."),
-	},
-}
+local fmt = require("luasnip.extras.fmt").fmt
+
+ls.add_snippets("all", {}, { key = "all" })
+ls.add_snippets("javascript", {
+	s("clg", t("console.log('Drei: ', "), i(1), t(");")),
+	s(
+		"cld",
+		fmt(
+			[[
+  console.log('Drei: ', {});
+  ]],
+			{ i(1, "") }
+		)
+	),
+}, { key = { "javascript", "javascriptreact" } })
+
+ls.filetype_extend("javascript", { "javascriptreact" })
+ls.filetype_extend("javascript", { "html" })

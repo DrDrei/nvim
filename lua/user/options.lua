@@ -43,6 +43,9 @@ vim.g.netrw_liststyle = 3
 vim.opt.cpoptions:append("y") -- save yanks to allow redo with '.' key
 vim.opt.shortmess:append("c")
 
+-- For dark theme
+vim.g.vscode_style = "dark"
+
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end

@@ -5,5 +5,6 @@ end
 
 luasnip.config.set_config({
 	history = true,
-	updateevents = "textchanged,textchangedi",
+	updateevents = "TextChanged,TextChangedI",
+	enable_autosnippets = true,
 })

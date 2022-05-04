@@ -45,6 +45,8 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
+	use("morhetz/gruvbox")
+	use("Mofiqul/vscode.nvim")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
@@ -74,17 +76,18 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("nvim-treesitter/playground")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Favorites
 	use({
 		"windwp/nvim-autopairs",
 		"akinsho/toggleterm.nvim",
+		"akinsho/bufferline.nvim",
 		"numToStr/Comment.nvim",
 		"lewis6991/gitsigns.nvim",
 		"kyazdani42/nvim-web-devicons",
 		"kyazdani42/nvim-tree.lua",
-		"akinsho/bufferline.nvim",
 		"tpope/vim-fugitive",
 		"phaazon/hop.nvim",
 		"jose-elias-alvarez/null-ls.nvim",
@@ -94,7 +97,12 @@ return packer.startup(function(use)
 	use({
 		"nvim-lualine/lualine.nvim",
 		config = function()
-			require("lualine").setup()
+			require("lualine").setup({
+				sections = {
+					lualine_c = {},
+					lualine_z = { "filesize" },
+				},
+			})
 		end,
 	})
 	use({
@@ -102,7 +110,7 @@ return packer.startup(function(use)
 		cmd = "CodeActionMenu",
 	})
 	use({
-		"ahmedkhalf/project.nvim",
+		"DrDrei/project.nvim",
 	})
 
 	if PACKER_BOOTSTRAP then

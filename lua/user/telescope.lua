@@ -18,7 +18,6 @@ telescope.setup({
 
 		file_ignore_patterns = {
 			"node_modules",
-			"__mocks__",
 			"backup/",
 			"yarn.lock",
 		},

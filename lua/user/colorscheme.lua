@@ -1,5 +1,5 @@
 -- Load the colorscheme
-local colorscheme = "tokyonight"
+local colorscheme = "vscode"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

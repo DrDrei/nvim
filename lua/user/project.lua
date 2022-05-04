@@ -4,7 +4,11 @@ if not status_ok then
 end
 
 project.setup({
-	manual_mode = true,
-	patterns = { ".bare" },
 	silent_chdir = false,
+	manual_mode = true,
+	update_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
 })

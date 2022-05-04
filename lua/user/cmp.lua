@@ -8,7 +8,8 @@ if not snip_status_ok then
 	return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load()
+luasnip.filetype_extend("js", { "javascript" })
+luasnip.filetype_extend("lua", { "lua" })
 
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
@@ -101,9 +102,6 @@ cmp.setup({
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
-	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 	experimental = {
 		ghost_text = true,
