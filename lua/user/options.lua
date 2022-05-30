@@ -26,7 +26,7 @@ local options = {
 	numberwidth = 4, -- set number column width to 2 {default 4}
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
 	wrap = false, -- display lines as one long line
-	scrolloff = 8, -- is one of my fav
+	scrolloff = 12, -- is one of my fav
 	sidescrolloff = 8,
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	ignorecase = true,
@@ -42,9 +42,6 @@ vim.g.netrw_liststyle = 3
 
 vim.opt.cpoptions:append("y") -- save yanks to allow redo with '.' key
 vim.opt.shortmess:append("c")
-
--- For dark theme
-vim.g.vscode_style = "dark"
 
 for k, v in pairs(options) do
 	vim.opt[k] = v

@@ -89,12 +89,22 @@ local function lsp_keymaps(bufnr)
 		opts
 	)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 end
 
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
+	end
+	if client.name == "sumneko_lua" then
+		client.resolved_capabilities.document_formatting = false
+	end
+	if client.resolved_capabilities.document_formatting then
+		vim.cmd([[
+        augroup LspFormatting
+          autocmd! * <buffer>
+          autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+        augroup END
+      ]])
 	end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)

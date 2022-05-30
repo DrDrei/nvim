@@ -5,7 +5,6 @@ end
 
 project.setup({
 	silent_chdir = false,
-	manual_mode = true,
 	update_cwd = true,
 	update_focused_file = {
 		enable = true,

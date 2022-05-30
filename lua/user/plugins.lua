@@ -44,9 +44,8 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- Colorschemes
-	use("folke/tokyonight.nvim")
-	use("morhetz/gruvbox")
 	use("Mofiqul/vscode.nvim")
+	use("ellisonleao/gruvbox.nvim")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")

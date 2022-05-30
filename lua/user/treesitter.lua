@@ -9,6 +9,7 @@ configs.setup({
 	ignore_install = { "" },
 	ensure_installed = {
 		"javascript",
+		"jsdoc",
 		"tsx",
 		"typescript",
 	},
