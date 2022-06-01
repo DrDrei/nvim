@@ -90,8 +90,9 @@ return packer.startup(function(use)
 		"tpope/vim-fugitive",
 		"phaazon/hop.nvim",
 		"jose-elias-alvarez/null-ls.nvim",
-		"ThePrimeagen/git-worktree.nvim",
-	})
+    -- https://github.com/ThePrimeagen/git-worktree.nvim
+		"ThePrimeagen/git-worktree.nvim", 
+  })
 
 	use({
 		"nvim-lualine/lualine.nvim",

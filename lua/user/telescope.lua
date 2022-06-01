@@ -98,6 +98,9 @@ telescope.setup({
     projects = {
       initial_mode = 'normal'
     },
+    grep_string = {
+      initial_mode = 'normal'
+    },
   },
 
 	extensions = {

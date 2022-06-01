@@ -55,8 +55,9 @@ keymap("n", "<C-p>", ":cp<cr>zz", opts)
 keymap("n", "<C-n>", ":cnext<cr>zz", opts)
 keymap("n", "<leader>cc", ":cclose<cr>zz", opts)
 
--- Git stuff
-keymap("n", "<leader>gs", ":Git<CR>:resize 12<cr>", opts)
+-- Git
+keymap("n", "<leader>gs", ":Git<CR>:resize 16<cr>", opts)
+keymap("n", "<leader>gf", ":Git fetch --prune", opts)
 keymap("n", "<leader>go", ":Git commit --no-verify<cr>", opts)
 keymap("n", "<leader>gr", ":Git rebase -i HEAD~", opts)
 keymap("n", "<leader>gl", ":Git pull<cr>", opts)
@@ -64,6 +65,7 @@ keymap("n", "<leader>gp", ":Git push --no-verify<cr>", opts)
 keymap("n", "<leader>gP", ":Git push -f --no-verify<cr>", opts)
 keymap("n", "<leader>gb", ":Git blame<cr>", opts)
 keymap("n", "<leader>gu", ":Git upstream<cr>", opts)
+keymap("n", "<leader>gd", ":Gvdiffsplit<cr>", opts)
 
 -- Worktrees
 keymap("n", "<leader>gw", ':lua require("telescope").extensions.git_worktree.git_worktrees()<cr><esc>', opts)
