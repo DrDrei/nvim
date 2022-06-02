@@ -11,16 +11,13 @@ local fmt = require("luasnip.extras.fmt").fmt
 
 ls.add_snippets("all", {}, { key = "all" })
 ls.add_snippets("javascript", {
-	s("clg", t("console.log('Drei: ', "), i(1), t(");")),
-	s(
-		"cld",
-		fmt(
-			[[
-  console.log('Drei: ', {});
-  ]],
-			{ i(1, "") }
-		)
-	),
+	s("clg", fmt([[ console.log('Drei: ', {}); ]], { i(1, "") })),
+	s("cld", fmt([[ console.log('Drei: ', {}); ]], { i(1, "") })),
+-- 	s("desc", fmt([[ 
+-- describe('{1}', ({2}) => {{
+--   {3} 
+-- }});
+-- ]], { i(1, "") },{ i(2, "") }, { i(3, "") } )),
 }, { key = { "javascript", "javascriptreact" } })
 
 ls.filetype_extend("javascript", { "javascriptreact" })
