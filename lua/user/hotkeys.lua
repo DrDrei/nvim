@@ -23,6 +23,8 @@ keymap("n", "<leader>Q", ":BufferLineCloseLeft<cr>:BufferLineCloseRight<cr>", te
 keymap("n", "<C-u>", "<C-u>zz", term_opts)
 keymap("n", "<C-d>", "<C-d>zz", term_opts)
 keymap("n", "<C-f>", "za", term_opts)
+keymap("n", "#", "#zz", term_opts)
+keymap("n", "*", "*zz", term_opts)
 keymap("n", "Y", "y$", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
@@ -41,6 +43,7 @@ keymap("n", "<leader>fw", ":HopWord<cr>", opts)
 keymap("n", "<leader>fy", ':lua require("telescope.builtin").grep_string({search = vim.fn.getreg()})<cr><esc>', opts)
 keymap("n", "<leader>ft", ":NvimTreeFindFile<cr>", opts)
 keymap("n", "<leader>fo", ":w | !open %<cr>", opts)
+keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting_sync()<cr>", opts)
 
 -- Nvim-tree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
@@ -57,7 +60,7 @@ keymap("n", "<leader>cc", ":cclose<cr>zz", opts)
 
 -- Git
 keymap("n", "<leader>gs", ":Git<CR>:resize 16<cr>", opts)
-keymap("n", "<leader>gf", ":Git fetch --prune", opts)
+keymap("n", "<leader>gf", ":Git fetch --prune<cr>", opts)
 keymap("n", "<leader>go", ":Git commit --no-verify<cr>", opts)
 keymap("n", "<leader>gr", ":Git rebase -i HEAD~", opts)
 keymap("n", "<leader>gl", ":Git pull<cr>", opts)
@@ -68,6 +71,6 @@ keymap("n", "<leader>gu", ":Git upstream<cr>", opts)
 keymap("n", "<leader>gd", ":Gvdiffsplit<cr>", opts)
 
 -- Worktrees
-keymap("n", "<leader>gw", ':lua require("telescope").extensions.git_worktree.git_worktrees()<cr><esc>', opts)
-keymap("n", "<leader>ga", ':lua require("telescope").extensions.git_worktree.create_git_worktree()<cr><esc>', opts)
+keymap("n", "<leader>gw", ':lua require("telescope").extensions.git_worktree.git_worktrees()<cr>', opts)
+keymap("n", "<leader>ga", ':lua require("telescope").extensions.git_worktree.create_git_worktree()<cr>', opts)
 keymap("n", "<leader>gc", ':lua require("git-worktree").create_worktree("', opts)

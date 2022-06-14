@@ -5,8 +5,8 @@ end
 
 project.setup({
 	silent_chdir = false,
-	manual_mode = true,
 	update_cwd = true,
+	patterns = { ".bare" },
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,

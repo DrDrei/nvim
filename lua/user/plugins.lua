@@ -67,6 +67,7 @@ return packer.startup(function(use)
 	})
 
 	-- Telescope
+	-- https://github.com/nvim-telescope/telescope.nvim
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 
@@ -90,9 +91,10 @@ return packer.startup(function(use)
 		"tpope/vim-fugitive",
 		"phaazon/hop.nvim",
 		"jose-elias-alvarez/null-ls.nvim",
-    -- https://github.com/ThePrimeagen/git-worktree.nvim
-		"ThePrimeagen/git-worktree.nvim", 
-  })
+		-- https://github.com/ThePrimeagen/git-worktree.nvim
+		-- "ThePrimeagen/git-worktree.nvim",
+		"DrDrei/git-worktree.nvim",
+	})
 
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -109,6 +111,7 @@ return packer.startup(function(use)
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
 	})
+
 	use({
 		"DrDrei/project.nvim",
 	})

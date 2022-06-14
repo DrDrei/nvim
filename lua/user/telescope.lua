@@ -85,23 +85,23 @@ telescope.setup({
 		},
 	},
 
-  pickers = {
-    buffers = {
-      initial_mode = 'normal'
-    },
-    git_commits = {
-      initial_mode = 'normal'
-    },
-    quickfixhistory = {
-      initial_mode = 'normal'
-    },
-    projects = {
-      initial_mode = 'normal'
-    },
-    grep_string = {
-      initial_mode = 'normal'
-    },
-  },
+	pickers = {
+		buffers = {
+			initial_mode = "normal",
+		},
+		git_commits = {
+			initial_mode = "normal",
+		},
+		quickfixhistory = {
+			initial_mode = "normal",
+		},
+		grep_string = {
+			initial_mode = "normal",
+		},
+		projects = {
+			initial_mode = "normal",
+		},
+	},
 
 	extensions = {
 		media_files = {

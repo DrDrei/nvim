@@ -20,5 +20,4 @@ ls.add_snippets("javascript", {
 -- ]], { i(1, "") },{ i(2, "") }, { i(3, "") } )),
 }, { key = { "javascript", "javascriptreact" } })
 
-ls.filetype_extend("javascript", { "javascriptreact" })
-ls.filetype_extend("javascript", { "html" })
+require("luasnip.loaders.from_vscode").lazy_load()
