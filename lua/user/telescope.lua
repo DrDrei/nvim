@@ -17,8 +17,13 @@ telescope.setup({
 		layout_strategy = "vertical",
 
 		file_ignore_patterns = {
-			"node_modules",
+			".git/",
+			"**/__mocks__/",
+			"**/__snapshots__/",
 			"backup/",
+			"dist/",
+			"node_modules/",
+			"reports/",
 			"yarn.lock",
 		},
 

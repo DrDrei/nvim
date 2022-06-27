@@ -44,8 +44,8 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 
 	-- Colorschemes
-	use("Mofiqul/vscode.nvim")
-	use("ellisonleao/gruvbox.nvim")
+	--
+	use({ "ellisonleao/gruvbox.nvim", "Mofiqul/vscode.nvim", "cocopon/iceberg.vim" })
 
 	-- Completion
 	use("hrsh7th/nvim-cmp")
@@ -94,7 +94,17 @@ return packer.startup(function(use)
 		-- https://github.com/ThePrimeagen/git-worktree.nvim
 		-- "ThePrimeagen/git-worktree.nvim",
 		"DrDrei/git-worktree.nvim",
+		"DrDrei/project.nvim",
 	})
+
+	-- use({
+	-- 	"DrDrei/cloner.nvim",
+	-- 	config = function()
+	-- 		require("cloner")
+	-- 	end,
+	-- })
+	--
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -107,13 +117,10 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
 	use({
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
-	})
-
-	use({
-		"DrDrei/project.nvim",
 	})
 
 	if PACKER_BOOTSTRAP then

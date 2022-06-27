@@ -31,7 +31,7 @@ keymap("n", "N", "Nzzzv", opts)
 keymap("n", "J", "mzJ`z", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fc", ":Telescope git_commits<cr>", opts)
@@ -39,7 +39,9 @@ keymap("n", "<leader>fu", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>fq", ":Telescope quickfixhistory<cr>", opts)
 keymap("n", "<leader>fj", ":Telescope grep_string<cr>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<cr>", opts)
+keymap("n", "<leader>fb", ":Telescope git_branches<cr>", opts)
 keymap("n", "<leader>fw", ":HopWord<cr>", opts)
+keymap("n", "<leader>fc", ":HopChar2<cr>", opts)
 keymap("n", "<leader>fy", ':lua require("telescope.builtin").grep_string({search = vim.fn.getreg()})<cr><esc>', opts)
 keymap("n", "<leader>ft", ":NvimTreeFindFile<cr>", opts)
 keymap("n", "<leader>fo", ":w | !open %<cr>", opts)
@@ -51,6 +53,7 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 -- Navigation
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
+keymap("n", "U", "<C-r>", opts)
 
 -- Quickfix/Location Lists
 keymap("n", "<C-q>", ":copen<cr>zz", opts)
@@ -69,6 +72,9 @@ keymap("n", "<leader>gP", ":Git push -f --no-verify<cr>", opts)
 keymap("n", "<leader>gb", ":Git blame<cr>", opts)
 keymap("n", "<leader>gu", ":Git upstream<cr>", opts)
 keymap("n", "<leader>gd", ":Gvdiffsplit<cr>", opts)
+
+keymap("n", "<leader>gj", "]cd2o", opts)
+keymap("n", "<leader>gk", "]cd3o", opts)
 
 -- Worktrees
 keymap("n", "<leader>gw", ':lua require("telescope").extensions.git_worktree.git_worktrees()<cr>', opts)

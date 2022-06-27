@@ -31,10 +31,7 @@ local options = {
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	ignorecase = true,
 	termguicolors = true,
-	foldmethod = "indent",
-	foldlevel = 4,
-	foldenable = true,
-	hidden = true,
+	hidden = true
 }
 
 vim.g.netrw_browse_split = 4
