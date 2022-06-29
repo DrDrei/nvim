@@ -8,6 +8,7 @@ telescope.load_extension("git_worktree")
 telescope.load_extension("projects")
 
 local actions = require("telescope.actions")
+local picker_mode = { initial_mode = "normal" }
 
 telescope.setup({
 	defaults = {
@@ -91,21 +92,13 @@ telescope.setup({
 	},
 
 	pickers = {
-		buffers = {
-			initial_mode = "normal",
-		},
-		git_commits = {
-			initial_mode = "normal",
-		},
-		quickfixhistory = {
-			initial_mode = "normal",
-		},
-		grep_string = {
-			initial_mode = "normal",
-		},
-		projects = {
-			initial_mode = "normal",
-		},
+		buffers = picker_mode,
+		git_commits = picker_mode,
+		quickfixhistory = picker_mode,
+		grep_string = picker_mode,
+		projects = picker_mode,
+		git_stash = picker_mode,
+		git_branches = picker_mode,
 	},
 
 	extensions = {
